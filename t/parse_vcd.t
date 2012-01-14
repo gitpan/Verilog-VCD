@@ -7,7 +7,7 @@ use Test::More tests => 29;
 BEGIN { use_ok('Verilog::VCD', qw(:all)) }
 
 # Check module version number
-BEGIN { use_ok('Verilog::VCD', '0.01') }
+BEGIN { use_ok('Verilog::VCD', '0.02') }
 
 
 my $vcd;

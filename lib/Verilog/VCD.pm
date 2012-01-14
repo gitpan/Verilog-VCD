@@ -8,7 +8,7 @@ use Exporter    qw(import);
 our @EXPORT_OK   = qw(parse_vcd list_sigs get_timescale get_endtime);
 our %EXPORT_TAGS = (all => \@EXPORT_OK);
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 my $timescale;
 my $endtime;
@@ -237,7 +237,7 @@ Verilog::VCD - Parse a Verilog VCD text file
 
 =head1 VERSION
 
-This document refers to Verilog::VCD version 0.01.
+This document refers to Verilog::VCD version 0.02.
 
 =head1 SYNOPSIS
 

@@ -1,10 +1,17 @@
 
 use warnings;
 use strict;
-use Test::More tests => 12;
+use Test::More;
 
-# Check if module loads ok
-BEGIN { use_ok('Verilog::VCD', qw(:all)) }
+if ($] < 5.008) {
+    plan skip_all => 'Test will not run on perl before version 5.8';
+    # Redirecting STDOUT to a scalar variable was introduced in 5.8.
+}
+else {
+    plan tests => 11;
+}
+
+use Verilog::VCD qw(:all);
 
 my $vcd;
 my $expected;

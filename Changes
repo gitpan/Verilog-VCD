@@ -1,5 +1,8 @@
 Revision history for Perl module Verilog::VCD
 
 
-0.01  Jan 3 2012
+0.02  Jan 13 2012
+      - skip stdout test on old versions of perl
+
+0.01  Jan 03 2012
       - original version of module 'Verilog::VCD'
