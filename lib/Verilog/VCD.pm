@@ -2,13 +2,14 @@ package Verilog::VCD;
 
 use warnings;
 use strict;
-use Carp        qw(croak);
-use Exporter    qw(import);
+use Carp qw(croak);
 
+require Exporter;
+our @ISA         = qw(Exporter);
 our @EXPORT_OK   = qw(parse_vcd list_sigs get_timescale get_endtime);
 our %EXPORT_TAGS = (all => \@EXPORT_OK);
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 my $timescale;
 my $endtime;
@@ -237,7 +238,7 @@ Verilog::VCD - Parse a Verilog VCD text file
 
 =head1 VERSION
 
-This document refers to Verilog::VCD version 0.02.
+This document refers to Verilog::VCD version 0.03.
 
 =head1 SYNOPSIS
 

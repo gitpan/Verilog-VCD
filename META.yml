@@ -1,7 +1,7 @@
 --- #YAML:1.0
 name:               Verilog-VCD
-version:            0.02
-abstract:           ~
+version:            0.03
+abstract:           Parse a Verilog VCD text file
 author:
     - Gene Sullivan <gsullivan@cpan.org>
 license:            perl
