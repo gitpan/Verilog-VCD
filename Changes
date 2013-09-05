@@ -1,6 +1,9 @@
 Revision history for Perl module Verilog::VCD
 
 
+0.04  Sep 5 2013
+      - strip cr-lf (reported by Markus Nentwig)
+
 0.03  Jan 17 2012
       - 'require' (not 'use') Exporter: avoid import error on old perl versions 
 
