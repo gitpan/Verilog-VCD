@@ -9,7 +9,7 @@ our @ISA         = qw(Exporter);
 our @EXPORT_OK   = qw(parse_vcd list_sigs get_timescale get_endtime);
 our %EXPORT_TAGS = (all => \@EXPORT_OK);
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 my $timescale;
 my $endtime;
@@ -97,12 +97,12 @@ sub parse_vcd {
 
         elsif (/ \$timescale \b /x) {
             my $statement = $_;
-            my $line;
-            unless (/ \$end \b /x) {
-                do {
-                    $line = <$fh>;
-                    $statement .= " $line";
-                } until ($line =~ / \$end \b /x);
+            my $line      = $_;
+            while ($line !~ / \$end \b /x) {
+                $line = <$fh>;
+                $line =~ s/ \s+ \z //x;  # Remove trailing whitespace
+                $line =~ s/ ^ \s+  //x;  # Remove leading  whitespace
+                $statement .= " $line";
             }
             $mult = calc_mult($statement, $opt);
         }
@@ -238,7 +238,7 @@ Verilog::VCD - Parse a Verilog VCD text file
 
 =head1 VERSION
 
-This document refers to Verilog::VCD version 0.04.
+This document refers to Verilog::VCD version 0.05.
 
 =head1 SYNOPSIS
 

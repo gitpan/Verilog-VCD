@@ -1,6 +1,9 @@
 Revision history for Perl module Verilog::VCD
 
 
+0.05  Jun 12 2014
+      - strip cr-lf in timescale
+
 0.04  Sep 5 2013
       - strip cr-lf (reported by Markus Nentwig)
 
